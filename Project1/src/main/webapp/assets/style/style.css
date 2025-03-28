@@ -1,0 +1,147 @@
+/* style.css */
+
+/* Stili generali per la pagina */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.homepage-content {
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.homepage-image-1 {
+    width: 100%;  /* Imposta la larghezza dell'immagine al 100% della larghezza del suo contenitore */
+    height: auto;  /* Mantiene le proporzioni originali dell'immagine */
+    object-fit: cover;  /* Rende l'immagine che riempie completamente lo schermo senza deformarsi */
+    display: block;  /* Rimuove eventuali spazi sotto l'immagine */
+    margin: 0;
+    padding: 0;  /* Elimina margini se presenti */
+}
+
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra gli elementi orizzontalmente */
+  align-items: center; /* Centra gli elementi verticalmente */
+  gap: 32px;
+  max-width: 90%;
+  background-color: #ffffff;
+  margin: 0 auto; /* Centra orizzontalmente */
+  padding: 10px;
+   border-radius: 8px;
+}
+
+
+.frame .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.frame .image {
+  width: 100%;
+  min-height: 300px; /* Altezza minima per assicurare la visibilità */
+  border-radius: 8px;
+  background-image: url("../../assets/images/restauro2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.frame .image-2{
+  width: 100%;
+  min-height: 300px; /* Altezza minima per assicurare la visibilità */
+  border-radius: 8px;
+  background-image: url("../../assets/images/restauro2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.frame .image-3 {
+  width: 100%;
+  min-height: 300px; /* Altezza minima per assicurare la visibilità */
+  border-radius: 8px;
+  background-image: url("../../assets/images/restauro2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.frame .copy {
+  display: flex;
+  flex-direction: column;
+  width: 381px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.frame .div {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #828282;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+
+/* Responsività per la homepage */
+@media (max-width: 768px) {
+    .homepage-content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+    
+    .frame {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .frame .copy {
+    width: 100%;
+    text-align: center;
+  }
+}
