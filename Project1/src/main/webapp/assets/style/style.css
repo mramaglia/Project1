@@ -1,147 +1,167 @@
-/* style.css */
+/* Stili generali */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/* Stili generali per la pagina */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
 }
 
-.homepage-content {
-    padding: 50px;
-    text-align: center;
-    background-color: white;
-    margin: 20px;
-    border-radius: 8px;
-}
-
+/* Titoli e Testi */
 h1 {
-    font-size: 2.5rem;
-    color: #333;
+  font-size: 2.5rem;
+  color: #333;
 }
 
 p {
-    font-size: 1.2rem;
-    color: #555;
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.homepage-image-1 {
-    width: 100%;  /* Imposta la larghezza dell'immagine al 100% della larghezza del suo contenitore */
-    height: auto;  /* Mantiene le proporzioni originali dell'immagine */
-    object-fit: cover;  /* Rende l'immagine che riempie completamente lo schermo senza deformarsi */
-    display: block;  /* Rimuove eventuali spazi sotto l'immagine */
-    margin: 0;
-    padding: 0;  /* Elimina margini se presenti */
-}
-
-.frame {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centra gli elementi orizzontalmente */
-  align-items: center; /* Centra gli elementi verticalmente */
-  gap: 32px;
-  max-width: 90%;
-  background-color: #ffffff;
-  margin: 0 auto; /* Centra orizzontalmente */
-  padding: 10px;
-   border-radius: 8px;
+/* Contenitore principale */
+.copy {
+  margin-left: 5%; /* Sposta il div più a sinistra lasciando un po' di margine */
+  width: 100%;
+  max-width: 844px;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  padding: 20px;
 }
 
 
-.frame .card {
+/* Titolo della pagina */
+.copy .page-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
   position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.frame .image {
   width: 100%;
-  min-height: 300px; /* Altezza minima per assicurare la visibilità */
-  border-radius: 8px;
-  background-image: url("../../assets/images/restauro2.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
-.frame .image-2{
-  width: 100%;
-  min-height: 300px; /* Altezza minima per assicurare la visibilità */
-  border-radius: 8px;
-  background-image: url("../../assets/images/restauro2.jpg");
-  background-size: cover;
-  background-position: center;
+/* Testo del titolo */
+.copy .text-wrapper {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 64px;
+  letter-spacing: -1.28px;
+  line-height: normal;
+  text-align: left;
 }
 
-.frame .image-3 {
-  width: 100%;
-  min-height: 300px; /* Altezza minima per assicurare la visibilità */
-  border-radius: 8px;
-  background-image: url("../../assets/images/restauro2.jpg");
-  background-size: cover;
-  background-position: center;
+/* Testo descrittivo */
+.copy .div {
+  font-family: var(--subheading-font-family, Arial);
+  font-weight: var(--subheading-font-weight, 400);
+  color: #000000bf;
+  font-size: var(--subheading-font-size, 20px);
+  letter-spacing: var(--subheading-letter-spacing, 0);
+  line-height: var(--subheading-line-height, 1.5);
+  font-style: var(--subheading-font-style, normal);
 }
 
-
-.frame .copy {
-  display: flex;
-  flex-direction: column;
-  width: 381px;
-  align-items: flex-start;
+/* Bottone */
+.copy .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
+  gap: 8px;
+  padding: 16px 24px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: var(--button-shadow, 0 4px 6px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
-.frame .text-wrapper {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: "Inter-Medium", Helvetica;
+/* Effetto hover sul bottone */
+.copy .button:hover {
+  background-color: #333;
+}
+
+/* Testo del bottone */
+.copy .text-wrapper-2 {
+  font-family: "Inter-Medium", Helvetica, sans-serif;
   font-weight: 500;
-  color: #000000;
   font-size: 24px;
-  letter-spacing: 0;
   line-height: 36px;
+  white-space: nowrap;
 }
 
-.frame .div {
-  position: relative;
-  align-self: stretch;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #828282;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 36px;
-}
-
-
-/* Responsività per la homepage */
-@media (max-width: 768px) {
-    .homepage-content {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-    
-    .frame {
-    flex-direction: column;
-    width: 100%;
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 1024px) {
+  .copy {
+    width: 90%;
+    max-width: 700px;
+    gap: 30px;
   }
 
-  .frame .copy {
+  .copy .text-wrapper {
+    font-size: 48px;
+  }
+
+  .copy .div {
+    font-size: 18px;
+  }
+
+  .copy .button {
+    padding: 14px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 95%;
+    max-width: 600px;
+    gap: 25px;
+  }
+
+  .copy .text-wrapper {
+    font-size: 40px;
+  }
+
+  .copy .div {
+    font-size: 16px;
+  }
+
+  .copy .button {
+    padding: 12px 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .copy {
     width: 100%;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .copy .text-wrapper {
+    font-size: 32px;
+  }
+
+  .copy .div {
+    font-size: 14px;
+  }
+
+  .copy .button {
+    width: 100%;
+    padding: 10px 16px;
     text-align: center;
+  }
+
+  .copy .text-wrapper-2 {
+    font-size: 20px;
   }
 }

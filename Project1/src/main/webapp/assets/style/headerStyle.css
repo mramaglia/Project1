@@ -1,35 +1,76 @@
-/* headerStyle.css */
-
-/* Stili generali per il body e il layout */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
-
-/* Header */
+/* Stile generale per l'header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
     color: black;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    position: relative;
+    border-radius: 10px;
 }
+
+.loginButton {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;  /* Rimuove la sottolineatura */
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;  /* Fa sì che l'elemento si comporti come un blocco, ma rimanga su una sola linea */
+    cursor: pointer;
+    text-align: center;  /* Allinea il testo al centro */
+}
+
+.loginButton:hover {
+    background-color: #b89b74;
+}
+
+.profileButton {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;  /* Rimuove la sottolineatura */
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;  /* Fa sì che l'elemento si comporti come un blocco, ma rimanga su una sola linea */
+    cursor: pointer;
+    text-align: center;  /* Allinea il testo al centro */
+}
+
+.profileButton:hover {
+    background-color: #b89b74;
+}
+
+.logoutButton {
+    background-color: #ff2f34;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;  /* Rimuove la sottolineatura */
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;  /* Fa sì che l'elemento si comporti come un blocco, ma rimanga su una sola linea */
+    cursor: pointer;
+    text-align: center;  /* Allinea il testo al centro */
+}
+
+.logoutButton:hover {
+    background-color: #db0005;
+}
+
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-right: auto;
 }
 
+/* Stile per il menu */
 .menu {
     list-style: none;
     display: flex;
-    justify-content: right;
     margin: 0;
     padding: 0;
+    z-index:1000;
 }
 
 .menu li {
@@ -40,68 +81,73 @@ body, html {
     text-decoration: none;
     color: black;
     font-size: 16px;
+    padding: 10px;
 }
 
 .menu a:hover {
-    color: #ddd;
+    color: #d2b48c;
 }
 
-.contactButton {
-    background-color: #d2b48c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-.contactButton:hover {
-    background-color: #ff1f2d;
-}
 
-/* Hamburger menu */
+
+/* Stile per il menu hamburger */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: black;
     font-size: 30px;
+    cursor: pointer;
 }
 
-/* Responsività */
+.p{
+	color:black;
+}
+
+
+/* Responsività per dispositivi mobili */
 @media (max-width: 768px) {
     .menu {
-        display: none;
+        display: none;  /* Nascondi il menu inizialmente */
         flex-direction: column;
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #333;
-        width: 200px;
+        background-color: #d2b48c;
+        width: 100%;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
     }
 
     .menu li {
-        margin: 0;
         text-align: center;
+        margin: 10px 0;
     }
 
     .menu a {
-        padding: 15px;
+        display: block;
+        padding: 10px;
         border-bottom: 1px solid #444;
+        color: white;
+    }
+
+    .menu a:hover {
+        background-color: #b89b74;
     }
 
     .menu-toggle {
-        display: block;
+        display: block;  /* Mostra il bottone hamburger */
+        background: none;
+        border: none;
         color: black;
+        font-size: 30px;
+        cursor: pointer;
     }
 
-    /* Qui utilizziamo .menu.show invece di #menu.show */
+    /* Classe per visualizzare il menu quando viene cliccato */
     .menu.show {
-        display: block;
-        position: absolute;
-        top: 60px;  /* Alza il menu sotto l'header */
-        right: 0;
-        background-color: 	#d2b48c;
-        width: 100%;
-        padding: 10px;
+        display: flex;  /* Mostra il menu */
     }
 }
+
