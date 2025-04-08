@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Card del prodotto */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    min-width: 280px; /* 👈 larghezza minima per evitare che si rimpicciolisca troppo */
+    margin: 15px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Titolo */
+.product-card h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Descrizione */
+.product-card p {
+    font-size: 1em;
+    color: #777;
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+}
+
+/* Prezzo e quantità */
+.product-card p.price {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-card p.quantity {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsive */
+
+/* Mobile */
+@media (max-width: 600px) {
+    .product-card {
+        width: 90%; /* 👈 facciamo occupare quasi tutto lo schermo */
+        margin: 10px auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .product-card {
+        width: 45%;
+        margin: 10px 2%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .product-card {
+        width: 30%;
+        margin: 15px;
+    }
+}

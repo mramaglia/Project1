@@ -1,0 +1,153 @@
+/* Stile generale per l'header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.loginButton {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;  /* Rimuove la sottolineatura */
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;  /* Fa sì che l'elemento si comporti come un blocco, ma rimanga su una sola linea */
+    cursor: pointer;
+    text-align: center;  /* Allinea il testo al centro */
+}
+
+.loginButton:hover {
+    background-color: #b89b74;
+}
+
+.profileButton {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;  /* Rimuove la sottolineatura */
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;  /* Fa sì che l'elemento si comporti come un blocco, ma rimanga su una sola linea */
+    cursor: pointer;
+    text-align: center;  /* Allinea il testo al centro */
+}
+
+.profileButton:hover {
+    background-color: #b89b74;
+}
+
+.logoutButton {
+    background-color: #ff2f34;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;  /* Rimuove la sottolineatura */
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;  /* Fa sì che l'elemento si comporti come un blocco, ma rimanga su una sola linea */
+    cursor: pointer;
+    text-align: center;  /* Allinea il testo al centro */
+}
+
+.logoutButton:hover {
+    background-color: #db0005;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Stile per il menu */
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    z-index:1000;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.menu a:hover {
+    color: #d2b48c;
+}
+
+
+
+
+/* Stile per il menu hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.p{
+	color:black;
+}
+
+
+/* Responsività per dispositivi mobili */
+@media (max-width: 768px) {
+    .menu {
+        display: none;  /* Nascondi il menu inizialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #d2b48c;
+        width: 100%;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        color: white;
+    }
+
+    .menu a:hover {
+        background-color: #b89b74;
+    }
+
+    .menu-toggle {
+        display: block;  /* Mostra il bottone hamburger */
+        background: none;
+        border: none;
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Classe per visualizzare il menu quando viene cliccato */
+    .menu.show {
+        display: flex;  /* Mostra il menu */
+    }
+}
+

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.add-product-button {
+    text-align: right;
+    margin: 20px;
+}
+
+.add-product-button .btn {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-product-button .btn:hover {
+    background-color: #008040;
+}
+
+
+/* Contenitore della griglia dei prodotti */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;           /* Le card vanno a capo se serve */
+    justify-content: center;   /* Centra le card orizzontalmente */
+    align-items: flex-start;   /* Allinea le card in alto */
+    gap: 20px;                 /* Spaziatura tra le card */
+    padding: 20px;             /* Spaziatura interna al contenitore */
+    max-width: 1200px;         /* Limita la larghezza massima */
+    margin: 0 auto;            /* Centra il contenitore nella pagina */
+}
+
