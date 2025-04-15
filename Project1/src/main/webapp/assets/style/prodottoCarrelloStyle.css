@@ -19,7 +19,7 @@
 /* Immagine del prodotto nel carrello */
 .cart-item-image {
     width: 150px;
-    height: 150px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
