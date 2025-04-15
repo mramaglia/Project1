@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 90%; /* Imposta una larghezza relativa per lasciare spazio ai lati */
+    max-width: 300px; /* Imposta una larghezza massima per evitare che sia troppo grande su schermi larghi */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px; /* Modificato il padding per rendere il pulsante più stretto */
+    background-color: #d2b48c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: auto; /* La larghezza viene adattata al contenuto */
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #c19a6b;
+}
+
+p {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Stile del pulsante Registrati */
+.accediButton {
+    background-color: #4CAF50; /* Colore verde */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    width: auto;
+}
+
+/* Hover per il pulsante registrati */
+.accediButton:hover {
+    background-color: #45a049; /* Colore verde scuro per l'hover */
+}
+
+/* Centrare la scritta "Già registrato? Accedi" */
+.registerLink {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Centrare il form in modo responsivo */
+.registrazioneForm {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Per allineare i componenti uno sopra l'altro */
+    justify-content: center;
+}
