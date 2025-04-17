@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style/global.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style/styleguide.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style/storeStyle.css" /> 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style/productOverlay.css" />
     <!-- mettere css per la pagina -->
     <title>Store</title>
     
@@ -75,8 +76,21 @@
 
 </div>
 
+<!-- Overlay per mostrare i dettagli del prodotto -->
+    <div id="product-overlay-background" class="product-overlay-background" style="display: none;"></div>
+
+	<div id="product-overlay" class="product-overlay" style="display: none;">
+	    <div class="product-overlay-content">
+	        <button class="close-overlay" onclick="closeProductOverlay()">✖</button>
+	        <div id="product-detail"></div> <!-- Questo è il contenitore per i dettagli del prodotto -->
+	    </div>
+	</div>
+    
+
        
 </body>
 </html>
+
+
 
 <%@ include file="/src/views/fragments/footer.jsp" %>

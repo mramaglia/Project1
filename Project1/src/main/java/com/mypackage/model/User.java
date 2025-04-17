@@ -27,11 +27,21 @@ public class User {
     }
 
     // Getter e Setter
+     public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+    
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+   
+	public void setUsername(String username) {
         this.username = username;
     }
 
@@ -55,11 +65,8 @@ public class User {
     	return admin;
     }
     
-    public void setAdmin() {
-    	this.admin=true;
+    public void setAdmin(boolean admin) {
+    	this.admin=admin;
     }
     
-    public void removeAdmin() {
-    	this.admin=false;
-    }
 }

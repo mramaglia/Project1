@@ -37,10 +37,10 @@
         <% } else { %>
             <!-- Mostra il pulsante del profilo se l'utente È loggato -->
             <a href="${pageContext.request.contextPath}/src/views/common/profilo.jsp" class="profileButton">Profilo</a>
-            <a href="${pageContext.request.contextPath}/servlets/LogoutServlet" class="logoutButton">Logout</a>
         <% } %>
     </div>
 
+    <input type="hidden" id="contextPath" value="${pageContext.request.contextPath}" />
     
 </header>
 

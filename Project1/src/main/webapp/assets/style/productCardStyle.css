@@ -102,11 +102,22 @@
 }
 
 
+.product-main {
+    cursor: pointer;
+}
 
-/* Responsive */
+.product-main:hover {
+    background-color: #f9f9f9;
+}
 
-/* Mobile */
-/* Mobile */
+.user-cart-form,
+.admin-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 @media (max-width: 600px) {
     .product-card {
         width: 100%; /* Utilizza tutta la larghezza disponibile */

@@ -70,6 +70,7 @@ public class StoresServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+		System.out.println(request.getAttribute("error"));
         // Recupera la lista dei prodotti dal database
         ProductDAO productDAO = new ProductDAO();
         List<Prodotto> products = productDAO.getAllProducts();

@@ -57,7 +57,7 @@ public class ProductDAO {
     public List<Prodotto> getAllProducts() {
         List<Prodotto> prodotti = new ArrayList<>();
 
-        String query = "SELECT * FROM prodotti";
+        String query = "SELECT * FROM prodotti WHERE quantita>0";
 
         try (Connection conn = dataSource.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query);
@@ -101,7 +101,7 @@ public class ProductDAO {
     			 String storedNome= rs.getString("nome");
     			 String storedDescrizione= rs.getString("descrizione");
     			 int storedPrezzo= rs.getInt("prezzo");
-    			 int storedQuantita= rs.getInt("id");
+    			 int storedQuantita= rs.getInt("quantita");
     			 String storedImmagine= rs.getString("immagine");
     			 String storedCategoria= rs.getString("categoria");
     			 
@@ -115,5 +115,46 @@ public class ProductDAO {
     	return prodotto;
     	
     }
+    
+    
+    public boolean updateProduct(Prodotto prodotto) {
+        String query = "UPDATE prodotti SET nome = ?, descrizione = ?, prezzo = ?, quantita = ?, categoria = ? WHERE id = ?";
+        
+        try (Connection con = dataSource.getConnection();
+             PreparedStatement ps = con.prepareStatement(query)) {
+            
+            ps.setString(1, prodotto.getNome());
+            ps.setString(2, prodotto.getDescrizione());
+            ps.setDouble(3, prodotto.getPrezzo());
+            ps.setInt(4, prodotto.getQuantita());
+            ps.setString(5, prodotto.getCategoria());
+            ps.setInt(6, prodotto.getId());
+            
+            int result = ps.executeUpdate();
+            return result > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    public boolean deleteProductById(int id) {
+        String query = "DELETE FROM prodotti WHERE id = ?";
+
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, id);
+            int result = stmt.executeUpdate();
+            return result > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
 
 }

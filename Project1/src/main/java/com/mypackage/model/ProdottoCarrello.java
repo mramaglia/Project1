@@ -5,6 +5,9 @@ public class ProdottoCarrello {
 	private Prodotto prodotto;
 	private int quantita;
 	
+	public ProdottoCarrello() {
+		
+	}
 	
 	public ProdottoCarrello(Prodotto prodotto, int quantita) {
 		this.prodotto = prodotto;

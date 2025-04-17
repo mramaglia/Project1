@@ -13,6 +13,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class UserDAOImpl implements UserDAO {
@@ -99,5 +101,31 @@ public class UserDAOImpl implements UserDAO {
         }
         return sb.toString();
     }
+    
+    public List<User> getAllUsers() {
+        List<User> utenti = new ArrayList<>();
+        String sql = "SELECT * FROM utenti ORDER BY data_iscrizione DESC";
+
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                User u = new User();
+                u.setId(rs.getInt("id"));
+                u.setUsername(rs.getString("nome"));
+                u.setEmail(rs.getString("email"));
+                u.setPassword(rs.getString("password")); // Se non ti serve, puoi ometterlo
+                u.setAdmin(rs.getBoolean("isAdmin"));
+                utenti.add(u);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return utenti;
+    }
+
     
 }

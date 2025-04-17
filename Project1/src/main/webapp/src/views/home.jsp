@@ -24,18 +24,6 @@
       <button class="button" onclick="window.location.href='${pageContext.request.contextPath}/src/views/common/about.jsp';"><div class="text-wrapper-2">Richiedi il preventivo per il tuo restauro</div></button>
     </div>
     
-    <% if (user != null) { %>
-        <% if (user.isAdmin()) { %>
-            <p>SEI UN ADMIN</p>
-        <% } else { %>
-            <p>NON SEI UN ADMIN</p>
-        <% } %>
-    <% } else { %>
-        <p>Non sei loggato.</p>
-    <% } %>
-	
-   
-    
 </body>
 </html>
 

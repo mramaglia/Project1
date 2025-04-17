@@ -63,5 +63,45 @@
         <servlet-name>RemoveFromCartServlet</servlet-name>
         <url-pattern>/servlets/RemoveFromCartServlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ConfermaOrdineServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.ConfermaOrdineServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfermaOrdineServlet</servlet-name>
+        <url-pattern>/servlets/ConfermaOrdineServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.ProductDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <url-pattern>/servlets/ProductDetailsServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.UpdateProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <url-pattern>/servlets/UpdateProductServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.DeleteProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/servlets/DeleteProductServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
