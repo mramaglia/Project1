@@ -79,15 +79,26 @@ p {
 
 /* Testo del bottone */
 .copy .text-wrapper-2 {
-  font-family: "Inter-Medium", Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  white-space: nowrap;
+  display: block;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 /* --- RESPONSIVE DESIGN --- */
 @media screen and (max-width: 1024px) {
+
   .copy {
     width: 90%;
     max-width: 700px;
@@ -105,6 +116,8 @@ p {
   .copy .button {
     padding: 14px 20px;
   }
+  
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -112,6 +125,10 @@ p {
     width: 95%;
     max-width: 600px;
     gap: 25px;
+  }
+  
+  .copy .text-wrapper-2 {
+    font-size: 15px;
   }
 
   .copy .text-wrapper {
@@ -125,6 +142,28 @@ p {
   .copy .button {
     padding: 12px 18px;
   }
+  .product-grid {
+ 		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        padding: 10px;
+        gap: 15px;
+        scroll-behavior: smooth;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+    
+    .product-grid {
+    padding: 10px;
+    gap: 15px;
+    grid-template-columns: 1fr; /* 1 colonna per schermi piccoli */
+     overflow-x: hidden; /* disattiva lo scroll orizzontale su desktop */
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -148,7 +187,5 @@ p {
     text-align: center;
   }
 
-  .copy .text-wrapper-2 {
-    font-size: 20px;
-  }
+  
 }

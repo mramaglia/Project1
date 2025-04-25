@@ -49,8 +49,20 @@ button:hover {
     background-color: #c19a6b;
 }
 
-p {
+.error-message {
     color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.messaggio-errore {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
     font-size: 14px;
     margin-top: 10px;
 }

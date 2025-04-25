@@ -126,6 +126,21 @@ public class UserDAOImpl implements UserDAO {
 
         return utenti;
     }
+    
+    public boolean emailExists(String email) {
+        boolean exists = false;
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement stmt = conn.prepareStatement("SELECT 1 FROM utenti WHERE email = ? LIMIT 1")) {
+            stmt.setString(1, email);
+            try (ResultSet rs = stmt.executeQuery()) {
+                exists = rs.next();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return exists;
+    }
+
 
     
 }

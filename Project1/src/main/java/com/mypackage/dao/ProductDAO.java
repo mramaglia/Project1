@@ -155,6 +155,30 @@ public class ProductDAO {
         }
     }
 
+    public List<Prodotto> getUltimiProdotti(int quanti) {
+        List<Prodotto> lista = new ArrayList<>();
+        try (Connection conn = dataSource.getConnection()) {
+            String sql = "SELECT * FROM prodotti ORDER BY data_creazione DESC LIMIT ?";
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                ps.setInt(1, quanti);
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()) {
+                	Prodotto p = new Prodotto();
+                	p.setId(rs.getInt("id"));
+                    p.setNome(rs.getString("nome"));
+                    p.setDescrizione(rs.getString("descrizione"));
+                    p.setPrezzo(rs.getInt("prezzo"));
+                    p.setQuantita(rs.getInt("quantita"));
+                    p.setImmagine(rs.getString("immagine"));
+                    p.setCategoria(rs.getString("categoria"));
+                    lista.add(p);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
 
 
 }

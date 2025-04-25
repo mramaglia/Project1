@@ -14,6 +14,16 @@
         <url-pattern>/servlets/LoginServlet</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>RegistrazioneServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.RegistrazioneServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistrazioneServlet</servlet-name>
+        <url-pattern>/servlets/RegistrazioneServlet</url-pattern>
+    </servlet-mapping>
+    
      <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>com.mypackage.servlets.LogoutServlet</servlet-class>
@@ -102,6 +112,16 @@
     <servlet-mapping>
         <servlet-name>DeleteProductServlet</servlet-name>
         <url-pattern>/servlets/DeleteProductServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>CheckEmailServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.CheckEmailServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckEmailServlet</servlet-name>
+        <url-pattern>/servlets/CheckEmailServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -1,60 +1,55 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.naming.*" %>
 <%@ page import="javax.sql.*" %>
 <%@ page import="java.util.*" %>
 <%@ page import="com.mypackage.dao.UserDAOImpl" %>
 
-<%
-    String message = "";
-    if (request.getMethod().equalsIgnoreCase("POST")) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String email = request.getParameter("email");
-
-        // Crea un'istanza di UserDAOImpl
-        UserDAOImpl userDAO = new UserDAOImpl();
-
-        // Chiama il metodo addUser 
-        boolean isAdded = userDAO.addUser(username, email, password);
-
-        if (isAdded) {
-            message = "Registrazione avvenuta con successo!";
-        } else {
-            message = "Errore: l'utente non Ë stato aggiunto";
-        }
-    }
-%>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8">
     <title>Registrazione</title>
-    
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style/registrazioneStyle.css">
+    <script src="${pageContext.request.contextPath}/assets/script/validazioneRegistrazione.js" defer></script>
 </head>
 <body>
     <div class="registrazioneForm">
         <h2>Registrazione</h2>
-        <form action="" method="POST">
+        <form id="formRegistrazione" action="<%= request.getContextPath() %>/servlets/RegistrazioneServlet" method="post">
+        
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
-            
+            <div id="errore-username" class="messaggio-errore"></div>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+            <div id="errore-email" class="messaggio-errore"></div>
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            
+            <div id="errore-password" class="messaggio-errore"></div>
+
             <button type="submit">Registrati</button>
         </form>
-        <p><%= message %></p>
 
-        <!-- Link per reindirizzare alla pagina di login -->
+		<% String successMessage = (String) request.getAttribute("successMessage"); %>
+		<% String errorMessage = (String) request.getAttribute("errorMessage"); %>
+		
+		<% if (successMessage != null) { %>
+		    <p class="success-message"><%= successMessage %></p>
+		<% } %>
+		
+		<% if (errorMessage != null) { %>
+		    <p class="error-message"><%= errorMessage %></p>
+		<% } %>
+
+
         <div class="registerLink">
-            <a href="accesso.jsp" class="accediButton">Gi‡ registrato? Accedi</a>
+            <a href="accesso.jsp" class="accediButton">Gi√† registrato? Accedi</a>
         </div>
     </div>
+
 </body>
 </html>
