@@ -1,0 +1,62 @@
+/* modificaProdotto.css */
+
+.edit-product-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fffdfa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-product-form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.edit-product-form input[type="text"],
+.edit-product-form input[type="number"],
+.edit-product-form input[type="file"],
+.edit-product-form textarea,
+.edit-product-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-product-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.edit-product-form .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-product-form .btn:hover {
+    background-color: #218838;
+}
+
+
+.image{
+	width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 10px
+}
