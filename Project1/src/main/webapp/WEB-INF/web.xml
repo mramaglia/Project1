@@ -1,0 +1,132 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+         
+    <welcome-file-list>
+        <welcome-file>src/views/home.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/servlets/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RegistrazioneServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.RegistrazioneServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistrazioneServlet</servlet-name>
+        <url-pattern>/servlets/RegistrazioneServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/servlets/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AddProductServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.AddProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddProductServlet</servlet-name>
+        <url-pattern>/servlets/AddProductServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>StoresServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.StoresServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StoresServlet</servlet-name>
+        <url-pattern>/servlets/StoresServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.AddToCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/servlets/AddToCartServlet</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+        <servlet-name>RemoveFromCartServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.RemoveFromCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveFromCartServlet</servlet-name>
+        <url-pattern>/servlets/RemoveFromCartServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ConfermaOrdineServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.ConfermaOrdineServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfermaOrdineServlet</servlet-name>
+        <url-pattern>/servlets/ConfermaOrdineServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.ProductDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <url-pattern>/servlets/ProductDetailsServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.UpdateProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <url-pattern>/servlets/UpdateProductServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.DeleteProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/servlets/DeleteProductServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>CheckEmailServlet</servlet-name>
+        <servlet-class>com.mypackage.servlets.CheckEmailServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckEmailServlet</servlet-name>
+        <url-pattern>/servlets/CheckEmailServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>

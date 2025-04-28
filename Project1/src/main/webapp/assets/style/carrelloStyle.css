@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 2px solid #eee;
+    text-align: right;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Testo totale */
+.cart-summary h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Bottone acquisto */
+.checkout-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effetto */
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* 🔄 Media query per schermi piccoli */
+@media (max-width: 600px) {
+    .cart-summary {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .cart-summary h2 {
+        font-size: 1.2em;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        font-size: 1em;
+        padding: 14px;
+    }
+}
+
